@@ -1065,6 +1065,30 @@ OTHER DEALINGS IN THE SOFTWARE.
 
   })(cls.Block);
 
+  cls.ReturningBlock = (function(_super) {
+    __extends(ReturningBlock, _super);
+
+    function ReturningBlock(options) {
+      ReturningBlock.__super__.constructor.call(this, options);
+      this.str = null;
+    }
+
+    ReturningBlock.prototype.returning = function(ret) {
+      return this.str = this._sanitizeField(ret);
+    };
+
+    ReturningBlock.prototype.buildStr = function(queryBuilder) {
+      if (this.str) {
+        return "RETURNING " + this.str;
+      } else {
+        return "";
+      }
+    };
+
+    return ReturningBlock;
+
+  })(cls.Block);
+
   cls.QueryBuilder = (function(_super) {
     __extends(QueryBuilder, _super);
 
@@ -1265,7 +1289,7 @@ OTHER DEALINGS IN THE SOFTWARE.
       if (blocks == null) {
         blocks = null;
       }
-      blocks || (blocks = [new cls.StringBlock(options, 'INSERT'), new cls.IntoTableBlock(options), new cls.InsertFieldValueBlock(options)]);
+      blocks || (blocks = [new cls.StringBlock(options, 'INSERT'), new cls.IntoTableBlock(options), new cls.InsertFieldValueBlock(options), new cls.ReturningBlock(options)]);
       Insert.__super__.constructor.call(this, options, blocks);
     }
 
