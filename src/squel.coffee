@@ -156,15 +156,17 @@ class cls.BaseBuilder extends cls.Cloneable
       throw new Error "#{type} must be a string"
     value
 
-  _sanitizeField: (item) ->
+  _sanitizeField: (item, options) ->
+    options = _extend {}, { quote: false }, options
     sanitized = @_sanitizeName item, "field name"
 
-    if @options.autoQuoteFieldNames
+    if @options.autoQuoteFieldNames || options.quote
       "#{@options.nameQuoteCharacter}#{sanitized}#{@options.nameQuoteCharacter}"
     else
       sanitized
 
-  _sanitizeTable: (item, allowNested = false) ->
+  _sanitizeTable: (item, allowNested = false, options) ->
+    options = _extend {}, { quote: false }, options
     if allowNested
       if "string" is typeof item
         sanitized = item
@@ -177,7 +179,7 @@ class cls.BaseBuilder extends cls.Cloneable
       sanitized = @_sanitizeName item, 'table name'
 
 
-    if @options.autoQuoteTableNames
+    if @options.autoQuoteTableNames || options.quote
       "#{@options.nameQuoteCharacter}#{sanitized}#{@options.nameQuoteCharacter}"
     else
       sanitized
@@ -509,6 +511,22 @@ class cls.GetFieldBlock extends cls.Block
   # An alias may also be specified for this field.
   field: (field, alias = null) ->
     field = @_sanitizeField(field)
+    alias = @_sanitizeFieldAlias(alias) if alias
+
+    @fields.push
+      name: field
+      alias: alias
+
+  qfield: (field, alias = null) ->
+    field = @_sanitizeField(field, { quote: true })
+    alias = @_sanitizeFieldAlias(alias) if alias
+
+    @fields.push
+      name: field
+      alias: alias
+
+  qtfield: (table, field, alias = null) ->
+    field = @_sanitizeTable(table, undefined, { quote: true }) + '.' + @_sanitizeField(field, { quote: true })
     alias = @_sanitizeFieldAlias(alias) if alias
 
     @fields.push

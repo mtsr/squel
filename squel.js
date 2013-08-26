@@ -160,21 +160,27 @@ OTHER DEALINGS IN THE SOFTWARE.
       return value;
     };
 
-    BaseBuilder.prototype._sanitizeField = function(item) {
+    BaseBuilder.prototype._sanitizeField = function(item, options) {
       var sanitized;
+      options = _extend({}, {
+        quote: false
+      }, options);
       sanitized = this._sanitizeName(item, "field name");
-      if (this.options.autoQuoteFieldNames) {
+      if (this.options.autoQuoteFieldNames || options.quote) {
         return "" + this.options.nameQuoteCharacter + sanitized + this.options.nameQuoteCharacter;
       } else {
         return sanitized;
       }
     };
 
-    BaseBuilder.prototype._sanitizeTable = function(item, allowNested) {
+    BaseBuilder.prototype._sanitizeTable = function(item, allowNested, options) {
       var sanitized;
       if (allowNested == null) {
         allowNested = false;
       }
+      options = _extend({}, {
+        quote: false
+      }, options);
       if (allowNested) {
         if ("string" === typeof item) {
           sanitized = item;
@@ -186,7 +192,7 @@ OTHER DEALINGS IN THE SOFTWARE.
       } else {
         sanitized = this._sanitizeName(item, 'table name');
       }
-      if (this.options.autoQuoteTableNames) {
+      if (this.options.autoQuoteTableNames || options.quote) {
         return "" + this.options.nameQuoteCharacter + sanitized + this.options.nameQuoteCharacter;
       } else {
         return sanitized;
@@ -546,6 +552,40 @@ OTHER DEALINGS IN THE SOFTWARE.
         alias = null;
       }
       field = this._sanitizeField(field);
+      if (alias) {
+        alias = this._sanitizeFieldAlias(alias);
+      }
+      return this.fields.push({
+        name: field,
+        alias: alias
+      });
+    };
+
+    GetFieldBlock.prototype.qfield = function(field, alias) {
+      if (alias == null) {
+        alias = null;
+      }
+      field = this._sanitizeField(field, {
+        quote: true
+      });
+      if (alias) {
+        alias = this._sanitizeFieldAlias(alias);
+      }
+      return this.fields.push({
+        name: field,
+        alias: alias
+      });
+    };
+
+    GetFieldBlock.prototype.qtfield = function(table, field, alias) {
+      if (alias == null) {
+        alias = null;
+      }
+      field = this._sanitizeTable(table, void 0, {
+        quote: true
+      }) + '.' + this._sanitizeField(field, {
+        quote: true
+      });
       if (alias) {
         alias = this._sanitizeFieldAlias(alias);
       }

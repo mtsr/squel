@@ -422,6 +422,52 @@ test['Blocks'] =
 
         assert.same [ { name: '_f', alias: '_a' } ], @inst.fields
 
+    'qfield()':
+      'quotes all field names': ->
+        @inst.qfield('field1')
+        @inst.qfield('field2', 'alias2')
+        @inst.qfield('field3')
+
+        expected = [
+          {
+          name: '`field1`',
+          alias: null
+          },
+          {
+          name: '`field2`',
+          alias: '"alias2"'
+          },
+          {
+          name: '`field3`',
+          alias: null
+          }
+        ]
+
+        assert.same expected, @inst.fields
+
+    'qtfield()':
+      'quotes all table and field names': ->
+        @inst.qtfield('table1', 'field1')
+        @inst.qtfield('table1', 'field2', 'alias2')
+        @inst.qtfield('table2', 'field3')
+
+        expected = [
+          {
+          name: '`table1`.`field1`',
+          alias: null
+          },
+          {
+          name: '`table1`.`field2`',
+          alias: '"alias2"'
+          },
+          {
+          name: '`table2`.`field3`',
+          alias: null
+          }
+        ]
+
+        assert.same expected, @inst.fields
+
     'buildStr()':
       'returns all fields when none provided': ->
         @inst.fields = []
