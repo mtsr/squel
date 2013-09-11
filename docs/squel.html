@@ -233,11 +233,11 @@ parameterized querying).</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-13">&#182;</a>
               </div>
-              <p>Global custom value handlers for all instances of builder</p>
+              <p>number parameters return from toParam as $1, $2, etc</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>cls.globalValueHandlers = []</pre></div></div>
+            <div class="content"><div class='highlight'><pre>  numberedParameters: <span class="literal">true</span></pre></div></div>
             
         </li>
         
@@ -247,6 +247,21 @@ parameterized querying).</p>
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Global custom value handlers for all instances of builder</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>cls.globalValueHandlers = []</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
               </div>
               <p>Register a value type handler</p>
 <p>Note: this will override any existing handler registered for this value type.</p>
@@ -272,11 +287,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-15">
+        <li id="section-16">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-15">&#182;</a>
+                <a class="pilcrow" href="#section-16">&#182;</a>
               </div>
               <p>Get value type handler for given type</p>
 
@@ -292,11 +307,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-16">
+        <li id="section-17">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-16">&#182;</a>
+                <a class="pilcrow" href="#section-17">&#182;</a>
               </div>
               <p>Register a new value handler</p>
 
@@ -308,11 +323,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-17">
+        <li id="section-18">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-17">&#182;</a>
+                <a class="pilcrow" href="#section-18">&#182;</a>
               </div>
               <p>Base class for cloneable builders</p>
 
@@ -323,11 +338,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-18">
+        <li id="section-19">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-18">&#182;</a>
+                <a class="pilcrow" href="#section-19">&#182;</a>
               </div>
               <p>Clone this builder</p>
 
@@ -339,11 +354,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-19">
+        <li id="section-20">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-19">&#182;</a>
+                <a class="pilcrow" href="#section-20">&#182;</a>
               </div>
               <p>Fast deep copy using JSON conversion, see <a href="http://stackoverflow.com/a/5344074">http://stackoverflow.com/a/5344074</a></p>
 
@@ -354,11 +369,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-20">
+        <li id="section-21">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-20">&#182;</a>
+                <a class="pilcrow" href="#section-21">&#182;</a>
               </div>
               <p>Base class for all builders</p>
 
@@ -369,11 +384,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-21">
+        <li id="section-22">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-21">&#182;</a>
+                <a class="pilcrow" href="#section-22">&#182;</a>
               </div>
               <p>Constructor</p>
 <p>options is an Object overriding one or more of cls.DefaultQueryBuilderOptions</p>
@@ -387,11 +402,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-22">
+        <li id="section-23">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-22">&#182;</a>
+                <a class="pilcrow" href="#section-23">&#182;</a>
               </div>
               <p>Register a custom value handler for this builder instance.</p>
 <p>Note: this will override any globally registered handler for this value type.</p>
@@ -405,11 +420,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-23">
+        <li id="section-24">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-23">&#182;</a>
+                <a class="pilcrow" href="#section-24">&#182;</a>
               </div>
               <p>Get class name of given object.</p>
 
@@ -425,11 +440,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-24">
+        <li id="section-25">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-24">&#182;</a>
+                <a class="pilcrow" href="#section-25">&#182;</a>
               </div>
               <p>Sanitize the given condition.</p>
 
@@ -440,11 +455,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-25">
+        <li id="section-26">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-25">&#182;</a>
+                <a class="pilcrow" href="#section-26">&#182;</a>
               </div>
               <p>If it&#39;s an expression builder instance then convert it to string form.</p>
 
@@ -461,11 +476,11 @@ parameterized querying).</p>
         </li>
         
         
-        <li id="section-26">
+        <li id="section-27">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-26">&#182;</a>
+                <a class="pilcrow" href="#section-27">&#182;</a>
               </div>
               <p>Sanitize the given name.
 The &#39;type&#39; parameter is used to construct a meaningful error message in case validation fails.</p>
@@ -494,11 +509,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-27">
+        <li id="section-28">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-27">&#182;</a>
+                <a class="pilcrow" href="#section-28">&#182;</a>
               </div>
               <p>allow nested queries</p>
 
@@ -535,11 +550,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-28">
+        <li id="section-29">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-28">&#182;</a>
+                <a class="pilcrow" href="#section-29">&#182;</a>
               </div>
               <p>Sanitize the given limit/offset value.</p>
 
@@ -554,11 +569,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-29">
+        <li id="section-30">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-29">&#182;</a>
+                <a class="pilcrow" href="#section-30">&#182;</a>
               </div>
               <p>Santize the given field value</p>
 
@@ -571,11 +586,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-30">
+        <li id="section-31">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-30">&#182;</a>
+                <a class="pilcrow" href="#section-31">&#182;</a>
               </div>
               <p>null is allowed</p>
 
@@ -586,11 +601,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-31">
+        <li id="section-32">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-31">&#182;</a>
+                <a class="pilcrow" href="#section-32">&#182;</a>
               </div>
               <p>primitives are allowed</p>
 
@@ -603,11 +618,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-32">
+        <li id="section-33">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-32">&#182;</a>
+                <a class="pilcrow" href="#section-33">&#182;</a>
               </div>
               <p>type is not valid</p>
 
@@ -619,11 +634,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-33">
+        <li id="section-34">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-33">&#182;</a>
+                <a class="pilcrow" href="#section-34">&#182;</a>
               </div>
               <p>Format the given field value for inclusion into the query string</p>
 
@@ -634,11 +649,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-34">
+        <li id="section-35">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-34">&#182;</a>
+                <a class="pilcrow" href="#section-35">&#182;</a>
               </div>
               <p>user defined custom handlers takes precedence</p>
 
@@ -650,11 +665,11 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         </li>
         
         
-        <li id="section-35">
+        <li id="section-36">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-35">&#182;</a>
+                <a class="pilcrow" href="#section-36">&#182;</a>
               </div>
               <p>use the custom handler if available</p>
 
@@ -670,19 +685,6 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
       <span class="keyword">if</span> <span class="literal">false</span> <span class="keyword">is</span> <span class="property">@options</span>.usingValuePlaceholders
         value = <span class="string">"'<span class="subst">#{value}</span>'"</span>
     value</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-36">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-36">&#182;</a>
-              </div>
-              <hr>
-
-            </div>
             
         </li>
         
@@ -703,10 +705,10 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         <li id="section-38">
             <div class="annotation">
               
-              <div class="pilwrap for-h2">
+              <div class="pilwrap ">
                 <a class="pilcrow" href="#section-38">&#182;</a>
               </div>
-              <h2>cls.Expressions</h2>
+              <hr>
 
             </div>
             
@@ -716,10 +718,10 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
         <li id="section-39">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-39">&#182;</a>
               </div>
-              <hr>
+              <h2>cls.Expressions</h2>
 
             </div>
             
@@ -731,6 +733,19 @@ The &#39;type&#39; parameter is used to construct a meaningful error message in 
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
               </div>
               <p>An SQL expression builder.</p>
 <p>SQL expressions are used in WHERE and ON clauses to filter data by various criteria.</p>
@@ -747,11 +762,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-41">
+        <li id="section-42">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-41">&#182;</a>
+                <a class="pilcrow" href="#section-42">&#182;</a>
               </div>
               <p>The expression tree.</p>
 
@@ -762,11 +777,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-42">
+        <li id="section-43">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-42">&#182;</a>
+                <a class="pilcrow" href="#section-43">&#182;</a>
               </div>
               <p>The part of the expression tree we&#39;re currently working on.</p>
 
@@ -777,11 +792,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-43">
+        <li id="section-44">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-43">&#182;</a>
+                <a class="pilcrow" href="#section-44">&#182;</a>
               </div>
               <p>Initialise the expression.</p>
 
@@ -796,11 +811,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-44">
+        <li id="section-45">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-44">&#182;</a>
+                <a class="pilcrow" href="#section-45">&#182;</a>
               </div>
               <p>Begin a nested expression and combine it with the current expression using the given operator.</p>
 
@@ -818,11 +833,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-45">
+        <li id="section-46">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-45">&#182;</a>
+                <a class="pilcrow" href="#section-46">&#182;</a>
               </div>
               <p>Begin a nested expression and combine it with the current expression using the intersection operator (AND).</p>
 
@@ -834,11 +849,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-46">
+        <li id="section-47">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-46">&#182;</a>
+                <a class="pilcrow" href="#section-47">&#182;</a>
               </div>
               <p>Begin a nested expression and combine it with the current expression using the union operator (OR).</p>
 
@@ -850,11 +865,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-47">
+        <li id="section-48">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-47">&#182;</a>
+                <a class="pilcrow" href="#section-48">&#182;</a>
               </div>
               <p>End the current compound expression.</p>
 <p>This will throw an error if begin() hasn&#39;t been called yet.</p>
@@ -870,11 +885,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-48">
+        <li id="section-49">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-48">&#182;</a>
+                <a class="pilcrow" href="#section-49">&#182;</a>
               </div>
               <p>Combine the current expression with the given expression using the intersection operator (AND).</p>
 
@@ -891,11 +906,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-49">
+        <li id="section-50">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-49">&#182;</a>
+                <a class="pilcrow" href="#section-50">&#182;</a>
               </div>
               <p>Combine the current expression with the given expression using the union operator (OR).</p>
 
@@ -912,11 +927,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-50">
+        <li id="section-51">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-50">&#182;</a>
+                <a class="pilcrow" href="#section-51">&#182;</a>
               </div>
               <p>Get the final fully constructed expression string.</p>
 
@@ -930,11 +945,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-51">
+        <li id="section-52">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-51">&#182;</a>
+                <a class="pilcrow" href="#section-52">&#182;</a>
               </div>
               <p>Get a string representation of the given expression tree node.</p>
 
@@ -951,11 +966,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-52">
+        <li id="section-53">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-52">&#182;</a>
+                <a class="pilcrow" href="#section-53">&#182;</a>
               </div>
               <p>wrap nested expressions in brackets</p>
 
@@ -968,11 +983,11 @@ When rendered a nested expression will be fully contained within brackets.</p>
         </li>
         
         
-        <li id="section-53">
+        <li id="section-54">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-53">&#182;</a>
+                <a class="pilcrow" href="#section-54">&#182;</a>
               </div>
               <p>if this isn&#39;t first expression then add the operator</p>
 
@@ -981,19 +996,6 @@ When rendered a nested expression will be fully contained within brackets.</p>
             <div class="content"><div class='highlight'><pre>                <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> str <span class="keyword">then</span> str += <span class="string">" "</span> + child.type + <span class="string">" "</span>
                 str += nodeStr
         str</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-54">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-54">&#182;</a>
-              </div>
-              <hr>
-
-            </div>
             
         </li>
         
@@ -1014,10 +1016,10 @@ When rendered a nested expression will be fully contained within brackets.</p>
         <li id="section-56">
             <div class="annotation">
               
-              <div class="pilwrap for-h2">
+              <div class="pilwrap ">
                 <a class="pilcrow" href="#section-56">&#182;</a>
               </div>
-              <h2>Building blocks</h2>
+              <hr>
 
             </div>
             
@@ -1027,10 +1029,10 @@ When rendered a nested expression will be fully contained within brackets.</p>
         <li id="section-57">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-57">&#182;</a>
               </div>
-              <hr>
+              <h2>Building blocks</h2>
 
             </div>
             
@@ -1042,6 +1044,19 @@ When rendered a nested expression will be fully contained within brackets.</p>
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-58">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-59">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-59">&#182;</a>
               </div>
               <p>A building block represents a single build-step within a query building process.</p>
 <p>Query builders consist of one or more building blocks which get run in a particular order. Building blocks can
@@ -1058,11 +1073,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-59">
+        <li id="section-60">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-59">&#182;</a>
+                <a class="pilcrow" href="#section-60">&#182;</a>
               </div>
               <p>Get input methods to expose within the query builder.</p>
 <p>By default all methods except the following get returned:
@@ -1080,11 +1095,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-60">
+        <li id="section-61">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-60">&#182;</a>
+                <a class="pilcrow" href="#section-61">&#182;</a>
               </div>
               <p>only want functions from this class</p>
 
@@ -1098,11 +1113,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-61">
+        <li id="section-62">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-61">&#182;</a>
+                <a class="pilcrow" href="#section-62">&#182;</a>
               </div>
               <p>Build this block.</p>
 <p>Subclasses may override this method.</p>
@@ -1112,16 +1127,19 @@ that you do so using one or more custom building blocks.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>  buildStr: (queryBuilder) -&gt;
-    <span class="string">''</span></pre></div></div>
+    <span class="string">''</span>
+
+  buildParam: (queryBuilder) -&gt;
+    { text: <span class="property">@buildStr</span>(queryBuilder), values: [] }</pre></div></div>
             
         </li>
         
         
-        <li id="section-62">
+        <li id="section-63">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-62">&#182;</a>
+                <a class="pilcrow" href="#section-63">&#182;</a>
               </div>
               <p>A String which always gets output</p>
 
@@ -1138,11 +1156,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-63">
+        <li id="section-64">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-63">&#182;</a>
+                <a class="pilcrow" href="#section-64">&#182;</a>
               </div>
               <p>Table specifier base class</p>
 <p>Additional options
@@ -1159,11 +1177,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-64">
+        <li id="section-65">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-64">&#182;</a>
+                <a class="pilcrow" href="#section-65">&#182;</a>
               </div>
               <p>Update given table.</p>
 <p>An alias may also be specified for the table.</p>
@@ -1195,11 +1213,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-65">
+        <li id="section-66">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-65">&#182;</a>
+                <a class="pilcrow" href="#section-66">&#182;</a>
               </div>
               <p>building a nested query</p>
 
@@ -1212,11 +1230,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-66">
+        <li id="section-67">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-66">&#182;</a>
+                <a class="pilcrow" href="#section-67">&#182;</a>
               </div>
               <p>add the table alias, the AS keyword is optional</p>
 
@@ -1229,11 +1247,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-67">
+        <li id="section-68">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-67">&#182;</a>
+                <a class="pilcrow" href="#section-68">&#182;</a>
               </div>
               <p>Update Table</p>
 
@@ -1246,11 +1264,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-68">
+        <li id="section-69">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-68">&#182;</a>
+                <a class="pilcrow" href="#section-69">&#182;</a>
               </div>
               <p>FROM table</p>
 
@@ -1270,11 +1288,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-69">
+        <li id="section-70">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-69">&#182;</a>
+                <a class="pilcrow" href="#section-70">&#182;</a>
               </div>
               <p>INTO table</p>
 
@@ -1288,11 +1306,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-70">
+        <li id="section-71">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-70">&#182;</a>
+                <a class="pilcrow" href="#section-71">&#182;</a>
               </div>
               <p>Into given table.</p>
 
@@ -1303,11 +1321,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-71">
+        <li id="section-72">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-71">&#182;</a>
+                <a class="pilcrow" href="#section-72">&#182;</a>
               </div>
               <p>do not allow nested table to be the target</p>
 
@@ -1322,11 +1340,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-72">
+        <li id="section-73">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-72">&#182;</a>
+                <a class="pilcrow" href="#section-73">&#182;</a>
               </div>
               <p>(SELECT) Get field</p>
 
@@ -1340,11 +1358,11 @@ that you do so using one or more custom building blocks.</p>
         </li>
         
         
-        <li id="section-73">
+        <li id="section-74">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-73">&#182;</a>
+                <a class="pilcrow" href="#section-74">&#182;</a>
               </div>
               <p>Add the given field to the final result set.</p>
 <p>The &#39;field&#39; parameter does not necessarily have to be a fieldname. It can use database functions too,
@@ -1373,11 +1391,11 @@ e.g. DATE_FORMAT(a.started, &quot;%H&quot;)</p>
         </li>
         
         
-        <li id="section-74">
+        <li id="section-75">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-74">&#182;</a>
+                <a class="pilcrow" href="#section-75">&#182;</a>
               </div>
               <p>(UPDATE) SET field=value</p>
 
@@ -1391,11 +1409,11 @@ e.g. DATE_FORMAT(a.started, &quot;%H&quot;)</p>
         </li>
         
         
-        <li id="section-75">
+        <li id="section-76">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-75">&#182;</a>
+                <a class="pilcrow" href="#section-76">&#182;</a>
               </div>
               <p>Update the given field with the given value.
 This will override any previously set value for the given field.</p>
@@ -1406,7 +1424,6 @@ This will override any previously set value for the given field.</p>
     field = <span class="property">@_sanitizeField</span>(field)
     value = <span class="property">@_sanitizeValue</span>(value)
     <span class="property">@fields</span>[field] = value
-    @
 
   buildStr: (queryBuilder) -&gt;
     fieldNames = (field <span class="keyword">for</span> own field <span class="keyword">of</span> <span class="property">@fields</span>)
@@ -1417,16 +1434,29 @@ This will override any previously set value for the given field.</p>
       fields += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> fields
       fields += <span class="string">"<span class="subst">#{field}</span> = <span class="subst">#{@_formatValue(@fields[field])}</span>"</span>
 
-    <span class="string">"SET <span class="subst">#{fields}</span>"</span></pre></div></div>
+    <span class="string">"SET <span class="subst">#{fields}</span>"</span>
+
+  buildParam: (queryBuilder) -&gt;
+    fieldNames = (field <span class="keyword">for</span> own field <span class="keyword">of</span> <span class="property">@fields</span>)
+    <span class="keyword">if</span> <span class="number">0</span> &gt;= fieldNames.length <span class="keyword">then</span> <span class="keyword">throw</span> <span class="keyword">new</span> Error <span class="string">"set() needs to be called"</span>
+
+    fields = <span class="string">""</span>
+    values = []
+    <span class="keyword">for</span> field <span class="keyword">in</span> fieldNames
+      fields += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> fields
+      fields += <span class="string">"<span class="subst">#{field}</span> = ?"</span>
+      values.push <span class="property">@fields</span>[field]
+
+    { text: <span class="string">"SET <span class="subst">#{fields}</span>"</span>, values: values }</pre></div></div>
             
         </li>
         
         
-        <li id="section-76">
+        <li id="section-77">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-76">&#182;</a>
+                <a class="pilcrow" href="#section-77">&#182;</a>
               </div>
               <p>(INSERT INTO) ... field ... value</p>
 
@@ -1444,11 +1474,11 @@ This will override any previously set value for the given field.</p>
         </li>
         
         
-        <li id="section-77">
+        <li id="section-78">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-77">&#182;</a>
+                <a class="pilcrow" href="#section-78">&#182;</a>
               </div>
               <p>fields</p>
 
@@ -1462,16 +1492,45 @@ This will override any previously set value for the given field.</p>
       values += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> values
       values += <span class="property">@_formatValue</span>(<span class="property">@fields</span>[field])
 
-    <span class="string">"(<span class="subst">#{fields}</span>) VALUES (<span class="subst">#{values}</span>)"</span></pre></div></div>
+    <span class="string">"(<span class="subst">#{fields}</span>) VALUES (<span class="subst">#{values}</span>)"</span>
+
+  buildParam: (queryBuilder) -&gt;
+    fieldNames = (name <span class="keyword">for</span> own name <span class="keyword">of</span> <span class="property">@fields</span>)
+    <span class="keyword">if</span> <span class="number">0</span> &gt;= fieldNames.length <span class="keyword">then</span> <span class="keyword">throw</span> <span class="keyword">new</span> Error <span class="string">"set() needs to be called"</span></pre></div></div>
             
         </li>
         
         
-        <li id="section-78">
+        <li id="section-79">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-78">&#182;</a>
+                <a class="pilcrow" href="#section-79">&#182;</a>
+              </div>
+              <p>fields</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    fields = <span class="string">""</span>
+    values = <span class="string">""</span>
+    valuesArr = []
+    <span class="keyword">for</span> field <span class="keyword">in</span> fieldNames
+      fields += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> fields
+      fields += field
+      values += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> values
+      values += <span class="string">"?"</span>
+      valuesArr.push <span class="property">@_formatValue</span>(<span class="property">@fields</span>[field])
+
+    { text: <span class="string">"(<span class="subst">#{fields}</span>) VALUES (<span class="subst">#{values}</span>)"</span>, values: valuesArr }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-80">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-80">&#182;</a>
               </div>
               <p>DISTINCT</p>
 
@@ -1485,11 +1544,11 @@ This will override any previously set value for the given field.</p>
         </li>
         
         
-        <li id="section-79">
+        <li id="section-81">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-79">&#182;</a>
+                <a class="pilcrow" href="#section-81">&#182;</a>
               </div>
               <p>Add the DISTINCT keyword to the query.</p>
 
@@ -1504,11 +1563,11 @@ This will override any previously set value for the given field.</p>
         </li>
         
         
-        <li id="section-80">
+        <li id="section-82">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-80">&#182;</a>
+                <a class="pilcrow" href="#section-82">&#182;</a>
               </div>
               <p>GROUP BY</p>
 
@@ -1522,11 +1581,11 @@ This will override any previously set value for the given field.</p>
         </li>
         
         
-        <li id="section-81">
+        <li id="section-83">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-81">&#182;</a>
+                <a class="pilcrow" href="#section-83">&#182;</a>
               </div>
               <p>Add a GROUP BY transformation for the given field.</p>
 
@@ -1550,11 +1609,11 @@ This will override any previously set value for the given field.</p>
         </li>
         
         
-        <li id="section-82">
+        <li id="section-84">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-82">&#182;</a>
+                <a class="pilcrow" href="#section-84">&#182;</a>
               </div>
               <p>OFFSET x</p>
 
@@ -1568,11 +1627,11 @@ This will override any previously set value for the given field.</p>
         </li>
         
         
-        <li id="section-83">
+        <li id="section-85">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-83">&#182;</a>
+                <a class="pilcrow" href="#section-85">&#182;</a>
               </div>
               <p>Set the OFFSET transformation.</p>
 <p>Call this will override the previously set offset for this query. Also note that Passing 0 for &#39;max&#39; will remove
@@ -1590,11 +1649,11 @@ the offset.</p>
         </li>
         
         
-        <li id="section-84">
+        <li id="section-86">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-84">&#182;</a>
+                <a class="pilcrow" href="#section-86">&#182;</a>
               </div>
               <p>WHERE</p>
 
@@ -1603,16 +1662,17 @@ the offset.</p>
             <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">class</span> <span class="title">cls</span>.<span class="title">WhereBlock</span> <span class="keyword">extends</span> <span class="title">cls</span>.<span class="title">Block</span></span>
   constructor: (options) -&gt;
     <span class="keyword">super</span> options
-    <span class="property">@wheres</span> = []</pre></div></div>
+    <span class="property">@wheres</span> = []
+    <span class="property">@wheresParam</span> = []</pre></div></div>
             
         </li>
         
         
-        <li id="section-85">
+        <li id="section-87">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-85">&#182;</a>
+                <a class="pilcrow" href="#section-87">&#182;</a>
               </div>
               <p>Add a WHERE condition.</p>
 <p>When the final query is constructed all the WHERE conditions are combined using the intersection (AND) operator.</p>
@@ -1620,16 +1680,17 @@ the offset.</p>
             </div>
             
             <div class="content"><div class='highlight'><pre>  where: (condition, values...) -&gt;
-    condition = <span class="property">@_sanitizeCondition</span>(condition)</pre></div></div>
+    condition = <span class="property">@_sanitizeCondition</span>(condition)
+    whereParam = { text: condition, values: [] }</pre></div></div>
             
         </li>
         
         
-        <li id="section-86">
+        <li id="section-88">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-86">&#182;</a>
+                <a class="pilcrow" href="#section-88">&#182;</a>
               </div>
               <p>substitute values into the condition</p>
 
@@ -1641,24 +1702,34 @@ the offset.</p>
         <span class="keyword">for</span> item <span class="keyword">in</span> value
           inValues.push <span class="property">@_formatValue</span> <span class="property">@_sanitizeValue</span> item
         value = <span class="string">"(<span class="subst">#{inValues.join ', '}</span>)"</span>
+        whereParam.text = condition.replace <span class="string">'?'</span>, <span class="string">"(<span class="subst">#{('?' <span class="keyword">for</span> item <span class="keyword">in</span> inValues).join ', '}</span>)"</span>
+        whereParam.values = inValues
       <span class="keyword">else</span>
         value = <span class="property">@_formatValue</span> <span class="property">@_sanitizeValue</span> value
+        whereParam.values.push value
       condition = condition.replace <span class="string">'?'</span>, value
 
     <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> condition
       <span class="property">@wheres</span>.push condition
 
+    <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> whereParam.text
+      <span class="property">@wheresParam</span>.push whereParam
+
   buildStr: (queryBuilder) -&gt;
-    <span class="keyword">if</span> <span class="number">0</span> &lt; <span class="property">@wheres</span>.length <span class="keyword">then</span> <span class="string">"WHERE ("</span> + <span class="property">@wheres</span>.join(<span class="string">") AND ("</span>) + <span class="string">")"</span> <span class="keyword">else</span> <span class="string">""</span></pre></div></div>
+    <span class="keyword">if</span> <span class="number">0</span> &lt; <span class="property">@wheres</span>.length <span class="keyword">then</span> <span class="string">"WHERE ("</span> + <span class="property">@wheres</span>.join(<span class="string">") AND ("</span>) + <span class="string">")"</span> <span class="keyword">else</span> <span class="string">""</span>
+
+  buildParam: (queryBuilder) -&gt;
+    text: <span class="keyword">if</span> <span class="number">0</span> &lt; <span class="property">@wheresParam</span>.length <span class="keyword">then</span> <span class="string">"WHERE ("</span> + ( where.text <span class="keyword">for</span> where <span class="keyword">in</span> <span class="property">@wheresParam</span> ).join(<span class="string">") AND ("</span>) + <span class="string">")"</span> <span class="keyword">else</span> <span class="string">""</span>
+    values: [].concat ( where.values <span class="keyword">for</span> where <span class="keyword">in</span> <span class="property">@wheresParam</span> )...</pre></div></div>
             
         </li>
         
         
-        <li id="section-87">
+        <li id="section-89">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-87">&#182;</a>
+                <a class="pilcrow" href="#section-89">&#182;</a>
               </div>
               <p>ORDER BY</p>
 
@@ -1672,11 +1743,11 @@ the offset.</p>
         </li>
         
         
-        <li id="section-88">
+        <li id="section-90">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-88">&#182;</a>
+                <a class="pilcrow" href="#section-90">&#182;</a>
               </div>
               <p>Add an ORDER BY transformation for the given field in the given order.</p>
 <p>To specify descending order pass false for the &#39;asc&#39; parameter.</p>
@@ -1702,11 +1773,11 @@ the offset.</p>
         </li>
         
         
-        <li id="section-89">
+        <li id="section-91">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-89">&#182;</a>
+                <a class="pilcrow" href="#section-91">&#182;</a>
               </div>
               <p>LIMIT</p>
 
@@ -1720,11 +1791,11 @@ the offset.</p>
         </li>
         
         
-        <li id="section-90">
+        <li id="section-92">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-90">&#182;</a>
+                <a class="pilcrow" href="#section-92">&#182;</a>
               </div>
               <p>Set the LIMIT transformation.</p>
 <p>Call this will override the previously set limit for this query. Also note that Passing 0 for &#39;max&#39; will remove
@@ -1743,11 +1814,11 @@ the limit.</p>
         </li>
         
         
-        <li id="section-91">
+        <li id="section-93">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-91">&#182;</a>
+                <a class="pilcrow" href="#section-93">&#182;</a>
               </div>
               <p>JOIN</p>
 
@@ -1761,11 +1832,11 @@ the limit.</p>
         </li>
         
         
-        <li id="section-92">
+        <li id="section-94">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-92">&#182;</a>
+                <a class="pilcrow" href="#section-94">&#182;</a>
               </div>
               <p>Add a JOIN with the given table.</p>
 <p>&#39;table&#39; is the name of the table to join with.</p>
@@ -1791,11 +1862,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-93">
+        <li id="section-95">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-93">&#182;</a>
+                <a class="pilcrow" href="#section-95">&#182;</a>
               </div>
               <p>Add a LEFT JOIN with the given table.</p>
 
@@ -1807,11 +1878,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-94">
+        <li id="section-96">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-94">&#182;</a>
+                <a class="pilcrow" href="#section-96">&#182;</a>
               </div>
               <p>Add a RIGHT JOIN with the given table.</p>
 
@@ -1823,11 +1894,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-95">
+        <li id="section-97">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-95">&#182;</a>
+                <a class="pilcrow" href="#section-97">&#182;</a>
               </div>
               <p>Add an OUTER JOIN with the given table.</p>
 
@@ -1855,11 +1926,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-96">
+        <li id="section-98">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-96">&#182;</a>
+                <a class="pilcrow" href="#section-98">&#182;</a>
               </div>
               <p>RETURNING</p>
 
@@ -1880,39 +1951,13 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-97">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-97">&#182;</a>
-              </div>
-              <hr>
-
-            </div>
-            
-        </li>
-        
-        
-        <li id="section-98">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-98">&#182;</a>
-              </div>
-              <hr>
-
-            </div>
-            
-        </li>
-        
-        
         <li id="section-99">
             <div class="annotation">
               
-              <div class="pilwrap for-h2">
+              <div class="pilwrap ">
                 <a class="pilcrow" href="#section-99">&#182;</a>
               </div>
-              <h2>Query builders</h2>
+              <hr>
 
             </div>
             
@@ -1935,8 +1980,34 @@ an expression builder then it gets evaluated straight away.</p>
         <li id="section-101">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-101">&#182;</a>
+              </div>
+              <h2>Query builders</h2>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-102">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-102">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-103">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-103">&#182;</a>
               </div>
               <p>Query builder base class</p>
 <p>Note that the query builder does not check the final query string for correctness.</p>
@@ -1949,11 +2020,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-102">
+        <li id="section-104">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-102">&#182;</a>
+                <a class="pilcrow" href="#section-104">&#182;</a>
               </div>
               <p>Constructor</p>
 <p>blocks - array of cls.BaseBuilderBlock instances to build the query with.</p>
@@ -1968,11 +2039,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-103">
+        <li id="section-105">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-103">&#182;</a>
+                <a class="pilcrow" href="#section-105">&#182;</a>
               </div>
               <p>Copy exposed methods into myself</p>
 
@@ -1992,11 +2063,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-104">
+        <li id="section-106">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-104">&#182;</a>
+                <a class="pilcrow" href="#section-106">&#182;</a>
               </div>
               <p>Register a custom value handler for this query builder and all its contained blocks.</p>
 <p>Note: This will override any globally registered handler for this value type.</p>
@@ -2012,11 +2083,11 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
-        <li id="section-105">
+        <li id="section-107">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-105">&#182;</a>
+                <a class="pilcrow" href="#section-107">&#182;</a>
               </div>
               <p>Update query builder options</p>
 <p>This will update the options for all blocks too. Use this method with caution as it allows you to change the
@@ -2032,11 +2103,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-106">
+        <li id="section-108">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-106">&#182;</a>
+                <a class="pilcrow" href="#section-108">&#182;</a>
               </div>
               <p>Get the final fully constructed query string.</p>
 
@@ -2048,11 +2119,34 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-107">
+        <li id="section-109">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-107">&#182;</a>
+                <a class="pilcrow" href="#section-109">&#182;</a>
+              </div>
+              <p>Get the final fully constructed query param obj.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  toParam: -&gt;
+    result = { text: <span class="string">''</span>, values: [] }
+    blocks = (block.buildParam(@) <span class="keyword">for</span> block <span class="keyword">in</span> <span class="property">@blocks</span>)
+    result.<span class="function"><span class="title">text</span></span> = (block.text <span class="keyword">for</span> block <span class="keyword">in</span> blocks).filter( (v) -&gt; <span class="keyword">return</span> (<span class="number">0</span> &lt; v.length)).join(<span class="string">' '</span>)
+    result.values = [].concat (block.values <span class="keyword">for</span> block <span class="keyword">in</span> blocks)...
+    <span class="keyword">if</span> <span class="property">@options</span>.numberedParameters
+      i = <span class="number">0</span>
+      result.text = result.text.replace <span class="regexp">/\?/g</span>, () -&gt; <span class="keyword">return</span> <span class="string">'$'</span> + ++i
+    result</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-110">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-110">&#182;</a>
               </div>
               <p>Deep clone</p>
 
@@ -2064,11 +2158,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-108">
+        <li id="section-111">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-108">&#182;</a>
+                <a class="pilcrow" href="#section-111">&#182;</a>
               </div>
               <p>Get whether queries built with this builder can be nested within other queries</p>
 
@@ -2080,11 +2174,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-109">
+        <li id="section-112">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-109">&#182;</a>
+                <a class="pilcrow" href="#section-112">&#182;</a>
               </div>
               <p>SELECT query builder.</p>
 
@@ -2113,11 +2207,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-110">
+        <li id="section-113">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-110">&#182;</a>
+                <a class="pilcrow" href="#section-113">&#182;</a>
               </div>
               <p>UPDATE query builder.</p>
 
@@ -2139,11 +2233,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-111">
+        <li id="section-114">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-111">&#182;</a>
+                <a class="pilcrow" href="#section-114">&#182;</a>
               </div>
               <p>DELETE query builder.</p>
 
@@ -2165,11 +2259,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-112">
+        <li id="section-115">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-112">&#182;</a>
+                <a class="pilcrow" href="#section-115">&#182;</a>
               </div>
               <p>An INSERT query builder.</p>
 
@@ -2185,45 +2279,6 @@ behaviour of your query builder mid-build.</p>
     ]
 
     <span class="keyword">super</span> options, blocks</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-113">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-113">&#182;</a>
-              </div>
-              <hr>
-
-            </div>
-            
-        </li>
-        
-        
-        <li id="section-114">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-114">&#182;</a>
-              </div>
-              <hr>
-
-            </div>
-            
-        </li>
-        
-        
-        <li id="section-115">
-            <div class="annotation">
-              
-              <div class="pilwrap for-h2">
-                <a class="pilcrow" href="#section-115">&#182;</a>
-              </div>
-              <h2>Exported API</h2>
-
-            </div>
             
         </li>
         
@@ -2247,6 +2302,45 @@ behaviour of your query builder mid-build.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-117">&#182;</a>
               </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-118">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-118">&#182;</a>
+              </div>
+              <h2>Exported API</h2>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-119">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-119">&#182;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-120">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-120">&#182;</a>
+              </div>
               
             </div>
             
@@ -2256,11 +2350,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-118">
+        <li id="section-121">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-118">&#182;</a>
+                <a class="pilcrow" href="#section-121">&#182;</a>
               </div>
               <p>Don&#39;t have a space-efficient elegant-way of .apply()-ing to constructors, so we specify the args</p>
 
@@ -2275,11 +2369,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-119">
+        <li id="section-122">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-119">&#182;</a>
+                <a class="pilcrow" href="#section-122">&#182;</a>
               </div>
               <p>aliases</p>
 
@@ -2290,11 +2384,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-120">
+        <li id="section-123">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-120">&#182;</a>
+                <a class="pilcrow" href="#section-123">&#182;</a>
               </div>
               <p>classes</p>
 
@@ -2305,11 +2399,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-121">
+        <li id="section-124">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-121">&#182;</a>
+                <a class="pilcrow" href="#section-124">&#182;</a>
               </div>
               <p>AMD</p>
 
@@ -2322,11 +2416,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-122">
+        <li id="section-125">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-122">&#182;</a>
+                <a class="pilcrow" href="#section-125">&#182;</a>
               </div>
               <p>CommonJS</p>
 
@@ -2338,11 +2432,11 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
-        <li id="section-123">
+        <li id="section-126">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-123">&#182;</a>
+                <a class="pilcrow" href="#section-126">&#182;</a>
               </div>
               <p>Browser</p>
 
