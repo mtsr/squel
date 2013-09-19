@@ -1424,6 +1424,7 @@ This will override any previously set value for the given field.</p>
     field = <span class="property">@_sanitizeField</span>(field)
     value = <span class="property">@_sanitizeValue</span>(value)
     <span class="property">@fields</span>[field] = value
+    @
 
   buildStr: (queryBuilder) -&gt;
     fieldNames = (field <span class="keyword">for</span> own field <span class="keyword">of</span> <span class="property">@fields</span>)
@@ -1519,7 +1520,7 @@ This will override any previously set value for the given field.</p>
       fields += field
       values += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> values
       values += <span class="string">"?"</span>
-      valuesArr.push <span class="property">@_formatValue</span>(<span class="property">@fields</span>[field])
+      valuesArr.push <span class="property">@fields</span>[field]
 
     { text: <span class="string">"(<span class="subst">#{fields}</span>) VALUES (<span class="subst">#{values}</span>)"</span>, values: valuesArr }</pre></div></div>
             
