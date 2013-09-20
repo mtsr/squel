@@ -1065,6 +1065,48 @@ OTHER DEALINGS IN THE SOFTWARE.
 
   })(cls.Block);
 
+  cls.UnionBlock = (function(_super) {
+    __extends(UnionBlock, _super);
+
+    function UnionBlock(options) {
+      UnionBlock.__super__.constructor.call(this, options);
+      this.unions = [];
+    }
+
+    UnionBlock.prototype.union = function(table, alias) {
+      if (alias == null) {
+        alias = null;
+      }
+      if (alias) {
+        this.alias = this._sanitizeTableAlias(alias);
+      }
+      this.unions.push(this._sanitizeTable(table, true));
+      return this;
+    };
+
+    UnionBlock.prototype.buildStr = function(queryBuilder) {
+      var union, unions, _i, _len, _ref3;
+      unions = "";
+      _ref3 = this.unions || [];
+      for (_i = 0, _len = _ref3.length; _i < _len; _i++) {
+        union = _ref3[_i];
+        unions += "UNION ";
+        if ("string" === typeof union) {
+          unions += union;
+        } else {
+          unions += "(" + union + ")";
+        }
+      }
+      if (this.alias) {
+        unions += " " + this.alias;
+      }
+      return unions;
+    };
+
+    return UnionBlock;
+
+  })(cls.Block);
+
   cls.ReturningBlock = (function(_super) {
     __extends(ReturningBlock, _super);
 
@@ -1235,7 +1277,7 @@ OTHER DEALINGS IN THE SOFTWARE.
           allowNested: true
         })), new cls.JoinBlock(_extend({}, options, {
           allowNested: true
-        })), new cls.WhereBlock(options), new cls.GroupByBlock(options), new cls.OrderByBlock(options), new cls.LimitBlock(options), new cls.OffsetBlock(options)
+        })), new cls.WhereBlock(options), new cls.GroupByBlock(options), new cls.OrderByBlock(options), new cls.LimitBlock(options), new cls.OffsetBlock(options), new cls.UnionBlock(options)
       ]);
       Select.__super__.constructor.call(this, options, blocks);
     }

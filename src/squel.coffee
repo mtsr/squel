@@ -812,6 +812,31 @@ class cls.JoinBlock extends cls.Block
     joins
 
 
+# UNION
+class cls.UnionBlock extends cls.Block
+  constructor: (options) ->
+    super options
+    @unions = []
+
+  union: (table, alias = null) ->
+    @alias = @_sanitizeTableAlias(alias) if alias
+    @unions.push @_sanitizeTable(table, true)
+    @
+
+  buildStr: (queryBuilder) ->
+    unions = ""
+
+    for union in (@unions or [])
+      unions += "UNION "
+      if "string" is typeof union
+        unions += union
+      else
+        unions += "(#{union})"
+    unions += " #{@alias}" if @alias
+
+    unions
+
+
 # RETURNING
 class cls.ReturningBlock extends cls.Block
   constructor: (options) ->
@@ -920,6 +945,7 @@ class cls.Select extends cls.QueryBuilder
         new cls.OrderByBlock(options),
         new cls.LimitBlock(options),
         new cls.OffsetBlock(options)
+        new cls.UnionBlock(options)
       ]
 
       super options, blocks
