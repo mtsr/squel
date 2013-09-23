@@ -599,7 +599,7 @@ class cls.InsertFieldValueBlock extends cls.SetFieldBlock
       fields += field
       values += ", " if "" isnt values
       values += "?"
-      valuesArr.push @fields[field]
+      valuesArr.push @_formatValue @fields[field]
 
     { text: "(#{fields}) VALUES (#{values})", values: valuesArr }
 

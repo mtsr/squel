@@ -1446,7 +1446,11 @@ This will override any previously set value for the given field.</p>
     <span class="keyword">for</span> field <span class="keyword">in</span> fieldNames
       fields += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> fields
       fields += <span class="string">"<span class="subst">#{field}</span> = ?"</span>
+<<<<<<< HEAD
       values.push <span class="property">@fields</span>[field]
+=======
+      values.push <span class="property">@_formatValue</span> <span class="property">@fields</span>[field]
+>>>>>>> parameterized
 
     { text: <span class="string">"SET <span class="subst">#{fields}</span>"</span>, values: values }</pre></div></div>
             
@@ -1520,7 +1524,11 @@ This will override any previously set value for the given field.</p>
       fields += field
       values += <span class="string">", "</span> <span class="keyword">if</span> <span class="string">""</span> <span class="keyword">isnt</span> values
       values += <span class="string">"?"</span>
+<<<<<<< HEAD
       valuesArr.push <span class="property">@fields</span>[field]
+=======
+      valuesArr.push <span class="property">@_formatValue</span> <span class="property">@fields</span>[field]
+>>>>>>> parameterized
 
     { text: <span class="string">"(<span class="subst">#{fields}</span>) VALUES (<span class="subst">#{values}</span>)"</span>, values: valuesArr }</pre></div></div>
             
@@ -1933,6 +1941,7 @@ an expression builder then it gets evaluated straight away.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-98">&#182;</a>
               </div>
+<<<<<<< HEAD
               <p>UNION</p>
 
             </div>
@@ -1960,6 +1969,12 @@ an expression builder then it gets evaluated straight away.</p>
 
     unions</pre></div></div>
             
+=======
+              <hr>
+
+            </div>
+            
+>>>>>>> parameterized
         </li>
         
         
@@ -1969,6 +1984,7 @@ an expression builder then it gets evaluated straight away.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-99">&#182;</a>
               </div>
+<<<<<<< HEAD
               <p>RETURNING</p>
 
             </div>
@@ -1985,16 +2001,29 @@ an expression builder then it gets evaluated straight away.</p>
   buildStr: (queryBuilder) -&gt;
     <span class="keyword">if</span> <span class="property">@str</span> <span class="keyword">then</span> <span class="string">"RETURNING <span class="subst">#{@str}</span>"</span> <span class="keyword">else</span> <span class="string">""</span></pre></div></div>
             
+=======
+              <hr>
+
+            </div>
+            
+>>>>>>> parameterized
         </li>
         
         
         <li id="section-100">
             <div class="annotation">
               
+<<<<<<< HEAD
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-100">&#182;</a>
               </div>
               <hr>
+=======
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-100">&#182;</a>
+              </div>
+              <h2>Query builders</h2>
+>>>>>>> parameterized
 
             </div>
             
@@ -2017,6 +2046,7 @@ an expression builder then it gets evaluated straight away.</p>
         <li id="section-102">
             <div class="annotation">
               
+<<<<<<< HEAD
               <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-102">&#182;</a>
               </div>
@@ -2045,6 +2075,10 @@ an expression builder then it gets evaluated straight away.</p>
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-104">&#182;</a>
+=======
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-102">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Query builder base class</p>
 <p>Note that the query builder does not check the final query string for correctness.</p>
@@ -2057,11 +2091,19 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-105">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-105">&#182;</a>
+=======
+        <li id="section-103">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-103">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Constructor</p>
 <p>blocks - array of cls.BaseBuilderBlock instances to build the query with.</p>
@@ -2076,11 +2118,19 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-106">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-106">&#182;</a>
+=======
+        <li id="section-104">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-104">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Copy exposed methods into myself</p>
 
@@ -2100,11 +2150,19 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-107">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-107">&#182;</a>
+=======
+        <li id="section-105">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-105">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Register a custom value handler for this query builder and all its contained blocks.</p>
 <p>Note: This will override any globally registered handler for this value type.</p>
@@ -2120,11 +2178,19 @@ an expression builder then it gets evaluated straight away.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-108">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-108">&#182;</a>
+=======
+        <li id="section-106">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-106">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Update query builder options</p>
 <p>This will update the options for all blocks too. Use this method with caution as it allows you to change the
@@ -2140,11 +2206,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-109">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-109">&#182;</a>
+=======
+        <li id="section-107">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-107">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Get the final fully constructed query string.</p>
 
@@ -2156,11 +2230,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-110">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-110">&#182;</a>
+=======
+        <li id="section-108">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-108">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Get the final fully constructed query param obj.</p>
 
@@ -2179,11 +2261,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-111">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-111">&#182;</a>
+=======
+        <li id="section-109">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-109">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Deep clone</p>
 
@@ -2195,11 +2285,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-112">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-112">&#182;</a>
+=======
+        <li id="section-110">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-110">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Get whether queries built with this builder can be nested within other queries</p>
 
@@ -2211,11 +2309,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-113">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-113">&#182;</a>
+=======
+        <li id="section-111">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-111">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>SELECT query builder.</p>
 
@@ -2234,7 +2340,10 @@ behaviour of your query builder mid-build.</p>
         <span class="keyword">new</span> cls.OrderByBlock(options),
         <span class="keyword">new</span> cls.LimitBlock(options),
         <span class="keyword">new</span> cls.OffsetBlock(options)
+<<<<<<< HEAD
         <span class="keyword">new</span> cls.UnionBlock(options)
+=======
+>>>>>>> parameterized
       ]
 
       <span class="keyword">super</span> options, blocks
@@ -2245,11 +2354,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-114">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-114">&#182;</a>
+=======
+        <li id="section-112">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-112">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>UPDATE query builder.</p>
 
@@ -2271,11 +2388,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-115">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-115">&#182;</a>
+=======
+        <li id="section-113">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-113">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>DELETE query builder.</p>
 
@@ -2297,11 +2422,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-116">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-116">&#182;</a>
+=======
+        <li id="section-114">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-114">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>An INSERT query builder.</p>
 
@@ -2312,8 +2445,12 @@ behaviour of your query builder mid-build.</p>
     blocks <span class="keyword">or</span>= [
       <span class="keyword">new</span> cls.StringBlock(options, <span class="string">'INSERT'</span>),
       <span class="keyword">new</span> cls.IntoTableBlock(options),
+<<<<<<< HEAD
       <span class="keyword">new</span> cls.InsertFieldValueBlock(options),
       <span class="keyword">new</span> cls.ReturningBlock(options)
+=======
+      <span class="keyword">new</span> cls.InsertFieldValueBlock(options)
+>>>>>>> parameterized
     ]
 
     <span class="keyword">super</span> options, blocks</pre></div></div>
@@ -2321,11 +2458,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-117">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-117">&#182;</a>
+=======
+        <li id="section-115">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-115">&#182;</a>
+>>>>>>> parameterized
               </div>
               <hr>
 
@@ -2334,11 +2479,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-118">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-118">&#182;</a>
+=======
+        <li id="section-116">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-116">&#182;</a>
+>>>>>>> parameterized
               </div>
               <hr>
 
@@ -2347,11 +2500,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-119">
             <div class="annotation">
               
               <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-119">&#182;</a>
+=======
+        <li id="section-117">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h2">
+                <a class="pilcrow" href="#section-117">&#182;</a>
+>>>>>>> parameterized
               </div>
               <h2>Exported API</h2>
 
@@ -2360,11 +2521,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-120">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-120">&#182;</a>
+=======
+        <li id="section-118">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-118">&#182;</a>
+>>>>>>> parameterized
               </div>
               <hr>
 
@@ -2373,11 +2542,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-121">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-121">&#182;</a>
+=======
+        <li id="section-119">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-119">&#182;</a>
+>>>>>>> parameterized
               </div>
               
             </div>
@@ -2388,11 +2565,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-122">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-122">&#182;</a>
+=======
+        <li id="section-120">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-120">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Don&#39;t have a space-efficient elegant-way of .apply()-ing to constructors, so we specify the args</p>
 
@@ -2407,11 +2592,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-123">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-123">&#182;</a>
+=======
+        <li id="section-121">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-121">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>aliases</p>
 
@@ -2422,11 +2615,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-124">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-124">&#182;</a>
+=======
+        <li id="section-122">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-122">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>classes</p>
 
@@ -2437,11 +2638,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-125">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-125">&#182;</a>
+=======
+        <li id="section-123">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-123">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>AMD</p>
 
@@ -2454,11 +2663,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-126">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-126">&#182;</a>
+=======
+        <li id="section-124">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-124">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>CommonJS</p>
 
@@ -2470,11 +2687,19 @@ behaviour of your query builder mid-build.</p>
         </li>
         
         
+<<<<<<< HEAD
         <li id="section-127">
             <div class="annotation">
               
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-127">&#182;</a>
+=======
+        <li id="section-125">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-125">&#182;</a>
+>>>>>>> parameterized
               </div>
               <p>Browser</p>
 
